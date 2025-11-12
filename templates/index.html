@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Números Primos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔢 Generador de Números Primos</h1>
+            <p class="subtitle">Descubre todos los números primos hasta el límite que indiques</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <label for="limite">Ingrese un número límite:</label>
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        id="limite" 
+                        placeholder="Ej: 100" 
+                        min="2"
+                        value="100"
+                    >
+                    <button onclick="calcularPrimos()" class="btn-calcular">Calcular</button>
+                </div>
+            </div>
+
+            <div id="resultado" class="resultado hidden">
+                <div class="resultado-header">
+                    <h2>Resultados</h2>
+                    <p id="info-resultados"></p>
+                </div>
+                
+                <div class="primos-container">
+                    <div id="primos-list"></div>
+                </div>
+
+                <div class="estadisticas">
+                    <div class="stat">
+                        <span class="stat-label">Números primos encontrados:</span>
+                        <span class="stat-valor" id="cantidad">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Rango analizado:</span>
+                        <span class="stat-valor" id="rango">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+        </main>
+
+        <footer>
+            <p>Creado con Python, Flask y HTML/CSS</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

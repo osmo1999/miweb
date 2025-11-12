@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZonaModaEC - Tu Tienda de Zapatos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ZonaModaEC</h1>
+                <p>Tu estilo, tu elección</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartIcon">
+                <span>🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Encuentra el Par Perfecto</h2>
+            <p>Calidad, estilo y comodidad en cada paso</p>
+            <a href="#productos" class="btn-primary">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-category="todos">Todos</button>
+                <button class="filter-btn" data-category="deportivos">Deportivos</button>
+                <button class="filter-btn" data-category="casuales">Casuales</button>
+                <button class="filter-btn" data-category="formales">Formales</button>
+            </div>
+            <div class="productos-grid" id="productosGrid">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Sobre Nosotros -->
+    <section class="nosotros" id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <p>En ZonaModaEC nos dedicamos a ofrecerte la mejor selección de zapatos con los más altos estándares de calidad. Desde zapatos deportivos hasta elegantes formales, tenemos el par perfecto para cada ocasión.</p>
+                    <p>Nuestra misión es combinar estilo, comodidad y durabilidad en cada producto que ofrecemos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contacto-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p>📧 Email: info@zonamodaec.com</p>
+                    <p>📞 Teléfono: +593 99 999 9999</p>
+                    <p>📍 Dirección: Quito, Ecuador</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ZonaModaEC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
